@@ -50,7 +50,7 @@ Acesta este un proiect web complet pentru monitorizarea și gestionarea indicilo
 
 Aplicația folosește un flux de rutare centralizat pentru a preveni accesul direct la fișierele sensibile:
 
-## 📊 Sursa Datelor
+##  Sursa Datelor
 
 Datele utilizate în acest proiect provin din surse oficiale guvernamentale:
 * **Portalul de Date Deschise al Guvernului României ([data.gov.ro](https://data.gov.ro))**.
