@@ -1,0 +1,286 @@
+/* Configurare generală */
+:root {
+    --primary: #007bff;
+    --dark: #343a40;
+    --light: #f8f9fa;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Tabelul de date */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th {
+    background-color: var(--dark);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Badge-uri de Status (Reutilizabile) */
+.badge {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.bg-success { background-color: var(--success); color: white; }
+.bg-info    { background-color: var(--info); color: white; }
+.bg-warning { background-color: var(--warning); color: #212529; }
+.bg-danger  { background-color: var(--danger); color: white; }
+.bg-dark    { background-color: var(--dark); color: white; }
+
+/* Formulare (Login & Add) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigație simplă */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+.filter-section form {
+    display: flex !important;
+    flex-direction: row !important; /* Forțează așezarea pe orizontală */
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    background: #1a1a1a; /* Match cu tema ta dark */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Stil pentru butonul de Export să fie egal cu cel de Filtrează */
+.btn-export {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a4a4a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    height: 38px; /* Aceeași înălțime cu butonul de filtrare */
+    border: 1px solid #555;
+    transition: 0.3s;
+}
+
+.btn-export:hover {
+    background-color: #666;
+}
+
+/* Transformăm [Șterge] într-un buton elegant roșu */
+.btn-delete {
+    background-color: #ff4d4d;
+    color: white !important;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-delete:hover {
+    background-color: #cc0000;
+    box-shadow: 0 2px 5px rgba(255,0,0,0.3);
+}
+
+/* Aliniere coloană Acțiuni */
+th:last-child, td:last-child {
+    text-align: center; /* Centrează butonul de ștergere în coloană */
+    width: 100px;
+}
+
+/* Banner Multimedia */
+.hero-banner {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1449156001931-82992a472761?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+}
+
+.hero-text h2 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin: 0;
+}
+
+/* Iconițe în Tabel */
+.param-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    filter: invert(1); /* Le face albe pentru tema dark */
+}
+
+/* Stiluri specifice pentru Export PDF / Print */
+@media print {
+    /* Ascundem elementele care nu au sens pe hârtie */
+    nav, .hero-banner, .filter-section, button, .btn-export, .btn-delete, footer, aside {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header h1 {
+        color: black !important;
+        font-size: 24pt;
+        text-align: left;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ccc !important;
+        color: black !important;
+        padding: 8px;
+    }
+
+    /* Adăugăm un titlu care apare doar la print */
+    body::before {
+        content: "Raport Calitate Aer - Generat automat de Sistem Aer România";
+        display: block;
+        margin-bottom: 20px;
+        font-weight: bold;
+        border-bottom: 2px solid black;
+    }
+}
+
+/* Stiluri pentru Footer */
+.main-footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+}
+
+.footer-contact {
+    margin-bottom: 15px;
+}
+
+.admin-link {
+    color: var(--success); /* Folosim variabila definită anterior */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.admin-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.project-author {
+    margin: 5px 0;
+    color: #777;
+}
+
+.project-author span {
+    color: #aaa;
+    font-weight: bold;
+}
+
+/* Ajustare pentru ecrane mici */
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 15px;
+        font-size: 0.75rem;
+    }
+}
+
