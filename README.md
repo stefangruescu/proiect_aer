@@ -49,3 +49,10 @@ Acesta este un proiect web complet pentru monitorizarea și gestionarea indicilo
 ## 📐 Arhitectura Sistemului
 
 Aplicația folosește un flux de rutare centralizat pentru a preveni accesul direct la fișierele sensibile:
+
+## 📊 Sursa Datelor
+
+Datele utilizate în acest proiect provin din surse oficiale guvernamentale:
+* **Portalul de Date Deschise al Guvernului României ([data.gov.ro](https://data.gov.ro))**.
+* Valorile monitorizate (PM10, PM2.5, NO2, SO2) sunt conforme cu rețeaua națională de monitorizare a calității aerului.
+* Datele au fost prelucrate și importate în sistem pentru a simula monitorizarea în timp real și pentru a genera rapoarte statistice.
