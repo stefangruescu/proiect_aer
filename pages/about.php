@@ -7,7 +7,6 @@ $page_title = "Documentație și Arhitectură Sistem | Detalii Implementare";
 
     <section style="margin-bottom: 40px; text-align: center;">
         <h2 style="color: #28a745; font-size: 2.2rem; margin-bottom: 10px;">Documentație Tehnică Detaliată</h2>
-        <p style="color: #888; text-transform: uppercase; letter-spacing: 2px;">Conform cerințelor de proiectare DAW</p>
         <hr style="border: 0; border-top: 1px solid #333; margin: 20px auto; width: 60%;">
     </section>
 
