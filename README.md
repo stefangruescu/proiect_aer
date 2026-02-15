@@ -15,8 +15,8 @@ Acesta este un proiect web complet pentru monitorizarea și gestionarea indicilo
 ## Tehnologii Utilizate
 
 * **Backend**: PHP 8.x (PDO pentru interacțiunea cu baza de date).
-* **Baza de date**: MySQL / MariaDB.
-* **Frontend**: HTML5, CSS3 (Design Minimalist Dark Mode).
+* **Baza de date**: MySQL.
+* **Frontend**: HTML5, CSS3.
 * **Server recomandat**: MAMP / XAMPP.
 
 ## Structura Proiectului
