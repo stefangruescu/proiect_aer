@@ -78,7 +78,7 @@ function get_filtered_measurements($pdo, $city = null)
 }
 
 /**
- * 3. AUTENTIFICARE ȘI ROLURI (Cerința: Separarea rolurilor)
+ * 3. AUTENTIFICARE ȘI ROLURI 
  */
 
 function login($pdo, $username, $password)
